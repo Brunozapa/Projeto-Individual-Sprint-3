@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
+    <script src="ScriptsLC/languages-selector.js"></script>
+    <style>
+        @font-face {
+            font-family: 'NBA Hornets Buzz City';
+            src: url('Projeto-Santastico\Fontes\NBA_Hornets_Buzz_City');
+        }
+        
+        @font-face {
+            font-family: 'Effra Heavy';
+            src: url('Projeto-Santastico\Fontes\Effra\Effra Heavy.ttf');
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="div-voltar"> <a href="../Home/home-pt.html"><i class="fas fa-angle-left"></i> <u>Voltar</u>  </div></a>
+        <div class="container-login">
+            <div class="box-login">
+                <div class="div-img-login">
+                    <img src="ImagensLC/santos-logo-escudo.png" alt="escudo do santos" style="margin-right: 25px;">
+                    <img src="ImagensLC/o-maior-brasileiro-do-mundo.png" alt="o maior brasileiro da terra">
+                </div>
+                <div class="div-language">
+                    <div class="box-language">
+                        <select onchange="slcIdioma()" id="idIdioma" class="select-language">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="pt">Português(BR)</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="div-input-login">
+                    <form class="box-input-login">
+                        <span>
+                        Usuario <br>
+                        <input type="email" placeholder="Escribe tu contraseña">
+                    </span>
+                        <span>
+                        Contraseña <br>
+                        <input type="password" placeholder="Escribe tu contraseña">
+                    </span>
+                    </form>
+                </div>
+                <div class="esq-senha"> Olvidaste tu contraseña? <a href="cadastro.html"><u>Clic aquí</u></a></div>
+                <div class="div-btn-entrar">
+                    <button onclick="analisarLogin()" class="btn-entrar">Avance</button>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

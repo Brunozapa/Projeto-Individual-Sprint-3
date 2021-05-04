@@ -1,0 +1,83 @@
+.container-cadastro {
+    margin-top: 100px;
+    padding-top: 20px;
+    width: 100%;
+    height: 600px;
+    background-color: rgb(12, 12, 12);
+    border-top: 5px solid goldenrod;
+}
+
+.sem-cadastro {
+    max-width: 700px;
+    margin: auto;
+}
+
+.sem-cadastro-txt {
+    text-align: center;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif, 'Lucida';
+    font-size: 17px;
+}
+
+.sem-cadastro-txt button {
+    margin-top: 30px;
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    color: goldenrod;
+    border: 3px solid goldenrod;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.main-cadastro {
+    max-width: 750px;
+    height: 600px;
+    margin: auto;
+    color: whitesmoke;
+}
+
+.main-cadastro-box {
+    max-width: 700px;
+    margin: auto;
+}
+
+.inp-mid {
+    margin-top: 40px;
+    float: left;
+    width: 700px;
+    height: 50px;
+}
+
+.inp-left {
+    margin-top: 40px;
+    float: left;
+    width: 325px;
+    height: 50px;
+}
+
+.inp-right {
+    margin-top: 40px;
+    float: right;
+    width: 325px;
+    height: 50px;
+}
+
+.inp-bot {
+    margin-top: 40px;
+    margin-right: 45px;
+    float: left;
+    width: 140px;
+    height: 50px;
+}
+
+.inp-cadastro {
+    margin-top: 10px;
+    height: 25px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1.5px solid goldenrod;
+    background-color: transparent;
+    color: whitesmoke;
+    outline: 0;
+}

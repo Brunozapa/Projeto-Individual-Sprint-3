@@ -1,0 +1,80 @@
+/* PARTIDAS */
+
+#partidas {
+    height: 300px;
+    background-color: transparent;
+    margin-top: -70px;
+    padding-bottom: 70px;
+}
+
+.partidas-container {
+    margin: auto;
+    max-width: 1000px;
+}
+
+.partidas-div {
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgb(37, 37, 37);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.partidas-div-left {
+    padding-top: 25px;
+    width: 498px;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.partidas-div-left-desc b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(68, 68, 68);
+}
+
+.partidas-div-right {
+    padding-top: 25px;
+    width: 498px;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.partidas-div-midline {
+    /* LINHA ENTRE AS PARTIDAS */
+    width: 2px;
+    margin-top: 30px;
+    height: 80%;
+    background-color: gray;
+    float: left;
+    text-align: center;
+}
+
+.placar-ultima-partida {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.placar-gols {
+    font-size: 35px;
+}
+
+.placar-vs {
+    font-size: 20px;
+}
+
+.time1-left {
+    height: 70px;
+    margin-right: 22px;
+}
+
+.time2-left {
+    height: 70px;
+    margin-left: 25px;
+}
+
+.partidas-div-left-desc {
+    margin-top: 20px;
+}
