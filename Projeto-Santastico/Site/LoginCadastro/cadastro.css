@@ -1,8 +1,9 @@
 .container-cadastro {
     margin-top: 100px;
     padding-top: 20px;
+    padding-bottom: 50px;
     width: 100%;
-    height: 600px;
+    height: 100%;
     background-color: rgb(12, 12, 12);
     border-top: 5px solid goldenrod;
 }
@@ -32,7 +33,7 @@
 
 .main-cadastro {
     max-width: 750px;
-    height: 600px;
+    height: 550px;
     margin: auto;
     color: whitesmoke;
 }
@@ -80,4 +81,24 @@
     background-color: transparent;
     color: whitesmoke;
     outline: 0;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.btn-cadastro {
+    text-align: center;
+    margin-top: 70px;
+    width: 270px;
+    height: 50px;
+    background-color: goldenrod;
+    color: white;
+    border: 1px solid goldenrod;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-cadastro:hover {
+    background-color: rgb(24, 24, 24);
 }

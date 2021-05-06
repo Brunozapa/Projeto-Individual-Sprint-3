@@ -116,3 +116,7 @@ a {
 .btn-entrar:hover {
     background-color: goldenrod;
 }
+
+input.error {
+    border-color: red;
+}

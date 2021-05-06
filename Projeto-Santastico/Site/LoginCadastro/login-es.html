@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cadastro.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
     <script src="ScriptsLC/languages-selector.js"></script>
+    <script src="ScriptsLC/script-login.js"></script>
     <style>
         @font-face {
             font-family: 'NBA Hornets Buzz City';
@@ -44,12 +46,12 @@
                 <div class="div-input-login">
                     <form class="box-input-login">
                         <span>
-                        Usuario <br>
-                        <input type="email" placeholder="Escribe tu contraseña">
+                        Email <br>
+                        <input type="email" placeholder="Escribe tu email" id="email">
                     </span>
                         <span>
                         Contraseña <br>
-                        <input type="password" placeholder="Escribe tu contraseña">
+                        <input type="password" placeholder="Escribe tu contraseña" id="senha">
                     </span>
                     </form>
                 </div>
@@ -59,6 +61,40 @@
                 </div>
             </div>
         </div>
+
+        <!-- -------------------------------------------------- -->
+        <div class="container-cadastro">
+            <div class="sem-cadastro">
+                <div class="sem-cadastro-txt" style="display: block;">
+                    <h1>¡Únete a Meu Santos!</h1> ¡Aquí el aficionado está más cerca de tu equipo! <br> ¡Tienes acceso exclusivo a ofertas, sorteos y noticias! <br>
+                    <button onclick="registre()">Registrarse</button>
+                </div>
+            </div>
+            <div class="main-cadastro" style="display: none;">
+                <div class="main-cadastro-box">
+                    <h1>Crear Una Cuenta</h1>
+                    <form class="form-cadastro">
+                        <div class="div-inp">
+                            <span class="inp-left">Primeir Nombre<input class="inp-cadastro" type="text" id="primeiro_nome"></span>
+                            <span class="inp-right">Último Nombre<input class="inp-cadastro" type="text" id="ultimo_nome"></span>
+                        </div>
+                        <div class="div-inp">
+                            <span class="inp-mid">Email<input class="inp-cadastro" type="text" id="email_cad"></span>
+                        </div>
+                        <div class="div-inp">
+                            <span class="inp-left">Contraseña<input class="inp-cadastro" type="text" id="senha1"></span>
+                            <span class="inp-right">Confirmar Seña<input class="inp-cadastro" type="text" id="senha2"></span>
+                        </div>
+                        <div class="div-inp">
+                            <span class="inp-bot">Cumpleaños<input class="inp-cadastro" type="date" id="aniversario"></span>
+                            <span class="inp-bot">País<select class="inp-cadastro" type="text" id="pais"><option value="BR">Brasil</option></select></span>
+                            <span class="inp-right">Ciudad<input class="inp-cadastro" type="text" id="cidade"></span>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
 </body>
 
 </html>
