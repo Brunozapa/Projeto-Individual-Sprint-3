@@ -23,11 +23,11 @@
             src: url('Projeto-Santastico\Fontes\Effra\Effra Heavy.ttf');
         }
     </style>
-    <title>Login</title>
+    <title>Login | Santos Futebol Clube</title>
 </head>
 
 <body>
-    <div class="div-voltar"> <a href="../Home/home-pt.html"><i class="fas fa-angle-left"></i> <u>Voltar</u>  </div></a>
+    <div class="div-voltar"> <a href="../Home/home-es.html"><i class="fas fa-angle-left"></i> <u>Voltar</u>  </div></a>
         <div class="container-login">
             <div class="box-login">
                 <div class="div-img-login">
@@ -64,13 +64,13 @@
 
         <!-- -------------------------------------------------- -->
         <div class="container-cadastro">
-            <div class="sem-cadastro">
+            <div class="sem-cadastro" id="sem_cadastro">
                 <div class="sem-cadastro-txt" style="display: block;">
                     <h1>¡Únete a Meu Santos!</h1> ¡Aquí el aficionado está más cerca de tu equipo! <br> ¡Tienes acceso exclusivo a ofertas, sorteos y noticias! <br>
-                    <button onclick="registre()">Registrarse</button>
+                    <button onclick="mostrar()">Registrarse</button>
                 </div>
             </div>
-            <div class="main-cadastro" style="display: none;">
+            <div class="main-cadastro" id="main_cadastro" style="display: none;">
                 <div class="main-cadastro-box">
                     <h1>Crear Una Cuenta</h1>
                     <form class="form-cadastro">
@@ -83,13 +83,63 @@
                         </div>
                         <div class="div-inp">
                             <span class="inp-left">Contraseña<input class="inp-cadastro" type="text" id="senha1"></span>
-                            <span class="inp-right">Confirmar Seña<input class="inp-cadastro" type="text" id="senha2"></span>
-                        </div>
+                            <span class="inp-left">Senha<input class="inp-cadastro" type="text" id="senha1"></span>
+                            <span class="inp-right">Jugador Favorito<select class="inp-cadastro" type="text" name="jogador">
+                                <option style="color: black;" value="1">Alisson</option>
+                                <option style="color: black;" value="2">Angelo</option>
+                                <option style="color: black;" value="3">Baliero</option>
+                                <option style="color: black;" value="4">Copete</option>
+                                <option style="color: black;" value="5">Felipe Jonathan</option>
+                                <option style="color: black;" value="6">Jhon</option>
+                                <option style="color: black;" value="7">João Paulo</option>
+                                <option style="color: black;" value="8">Kaiky</option>
+                                <option style="color: black;" value="9">Luan Peres</option>
+                                <option style="color: black;" value="10">Lucas Braga</option>
+                                <option style="color: black;" value="11">Lucas Lourenço</option>
+                                <option style="color: black;" value="12">Marcos Leonardo</option>
+                                <option style="color: black;" value="13">Madson</option>
+                                <option style="color: black;" value="14">Marinho</option>
+                                <option style="color: black;" value="15">Pará</option>
+                                <option style="color: black;" value="16">Pirani</option>
+                                <option style="color: black;" value="17">Sanchez</option>
+                                <option style="color: black;" value="18">Sandry</option>
+                                <option style="color: black;" value="19">Kaio Jorge</option>
+                            </select></span> </div>
                         <div class="div-inp">
                             <span class="inp-bot">Cumpleaños<input class="inp-cadastro" type="date" id="aniversario"></span>
-                            <span class="inp-bot">País<select class="inp-cadastro" type="text" id="pais"><option value="BR">Brasil</option></select></span>
+                            <span class="inp-bot">País<select class="inp-cadastro" type="text" id="pais">
+
+                                <option value="ALE">Alemania</option>
+                                <option value="ANG">Angola</option>
+                                <option value="ARG">Argentina</option>
+                                <option value="AUS">Australia</option>
+                                <option value="BOL">Bolivia</option>
+                                <option value="BRA" selected="selected">Brasil</option>
+                                <option value="CHI">Chile</option>
+                                <option value="COL">Colombia</option>
+                                <option value="EQU">Ecuador</option>
+                                <option value="ESP">España</option>
+                                <option value="EUA">Estados Unidos</option>
+                                <option value="FRA">Francia</option>
+                                <option value="HOL">Holanda</option>
+                                <option value="ITA">Italia</option>
+                                <option value="JAP">Japón</option>
+                                <option value="MOC">Mozambique</option>
+                                <option value="MEX">México</option>>
+                                <option value="PAR">Paraguay</option>
+                                <option value="PER">Perú</option>
+                                <option value="POR">Portugal</option>
+                                <option value="RNU">Reino Unido</option>
+                                <option value="RUS">Rusia</option>
+                                <option value="URU">Uruguay</option>
+                                 </select>                                
+                            
+                                </span>
                             <span class="inp-right">Ciudad<input class="inp-cadastro" type="text" id="cidade"></span>
 
+                        </div>
+                        <div style="text-align: center;">
+                            <button onclick="registro()" class="btn-cadastro">Registrarse</button>
                         </div>
                     </form>
 

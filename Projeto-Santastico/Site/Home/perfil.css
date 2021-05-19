@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Nunito Sans', sans-serif, 'Lucida';
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Header Maior */
+
+.header-large {
+    margin: auto;
+    max-width: 94%;
+    height: 70px;
+}
+
+.header-box-logo {
+    position: absolute;
+    float: left;
+    margin-top: -22px;
+}
+
+.logo-header-img {
+    height: 96px;
+}
+
+.header-navbar {
+    margin-top: -10px;
+    float: right;
+}
+
+.header-navbar ul {
+    color: white;
+    font-size: 25px;
+}
+
+.nav-list {
+    list-style: none;
+    display: inline;
+    margin-right: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+/* --------------------------------- */
+
+
+/* SEPARACAO */
+
+#separacao {
+    background-image: url('Imagens/Fotos/nova-vila-belmiro1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.separacao-section {
+    margin-top: -75px;
+    width: 100%;
+    height: 400px;
+}
+
+.perfil-infos {
+    padding-top: 130px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    /* para deixar a div txt em baixo */
+}
+
+.perfil-infos-container {
+    height: 200px;
+    width: 100%;
+}
+
+.perfil-infos-box {
+    margin: auto;
+    max-width: 1200px;
+    text-shadow: 3px 1px 5px rgba(0, 0, 0, 0.9);
+    font-family: 'Effra Heavy';
+}
+
+.infos-txt {
+    float: left;
+    width: 50%;
+    margin-block-start: 110px;
+    margin-block-end: 0;
+    margin-left: 50px;
+    font-weight: bolder;
+    font-size: 65px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+}
+
+.infos-img {
+    margin-top: 85px;
+    float: left;
+    height: 200px;
+}
+
+
+/* PRINCIPAL */
+
+.container-perfil {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin: auto;
+    width: 1000px;
+    height: 700px;
+}
+
+.nav-perfil {
+    height: 50px;
+    background-color: goldenrod;
+    /* background: linear-gradient(270deg, goldenrod 67.93%, rgba(255, 255, 255, 0) 51.24%), #F2F2F2; */
+}
+
+.navbar {
+    text-align: center;
+    float: left;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: goldenrod;
+    border: 0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.perfil-box {
+    width: 100%;
+    height: 450px;
+    background-color: #f1f1f1;
+}
+
+.selecionado {
+    background-color: #f1f1f1;
+}
+
+
+/* DETALHES DA CONTA */
+
+.detalhes {
+    margin: auto;
+    max-width: 83%;
+}
+
+.div-left {
+    float: left;
+    width: 45%;
+}
+
+.div-right {
+    float: right;
+    width: 45%;
+}
+
+.inp-left {
+    margin-top: 40px;
+    float: left;
+    width: 325px;
+    height: 50px;
+}
+
+.inp-right {
+    margin-top: 40px;
+    float: right;
+    width: 325px;
+    height: 50px;
+}
+
+.inp-bot {
+    margin-top: 40px;
+    margin-right: 45px;
+    float: left;
+    width: 140px;
+    height: 50px;
+}
+
+.inp-cadastro {
+    margin-top: 10px;
+    height: 25px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1.5px solid goldenrod;
+    background-color: transparent;
+    color: black;
+    font-size: 17px;
+    outline: 0;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.btn-cadastro {
+    text-align: center;
+    margin-top: 70px;
+    width: 270px;
+    height: 50px;
+    background-color: goldenrod;
+    color: white;
+    border: 1px solid goldenrod;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-cadastro:hover {
+    background-color: rgb(24, 24, 24);
+}
+
+
+/* JOGADOR FAVORITO */
+
+.jogador {
+    margin: auto;
+    padding-top: 60px;
+    max-width: 80%;
+}
+
+.img-jogador {
+    float: left;
+}
+
+.infos-jogador {
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-left: 50px;
+    height: 300px;
+    width: 350px;
+    float: left;
+    border-left: 2px solid black;
+}
+
+.infos-jogador ul {
+    padding: 0;
+}
+
+.infos-jogador li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.infos-jogador h4 {
+    margin-top: 25px;
+}
+
+
+/* selecionar jogador */
+
+.select-jogador {
+    width: 300px;
+    padding: 0;
+    float: left;
+    text-align: center;
+    margin: 0;
+}
+
+.main-select-jogador {
+    cursor: pointer;
+}
+
+.jogador-combobox {
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.829);
+}
+
+.jogador-combobox h4 {
+    margin-bottom: 5px;
+    margin-block-start: 0;
+    color: goldenrod;
+}
+
+.ul-top {
+    width: 100%;
+    height: 180px;
+}
+
+.ul-bot {
+    width: 100%;
+    height: 180px;
+}
+
+.jogador-combobox ul {
+    margin-left: 20px;
+    float: left;
+    padding: 0;
+}
+
+.jogador-combobox li {
+    margin-left: 10px;
+    text-align: left;
+    list-style: none;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.jogador-txt {
+    cursor: pointer;
+}
+
+.jogador-txt:hover {
+    color: goldenrod;
+}
+
+.header-language-img {
+    margin-top: 7px;
+    height: 20px;
+    width: 30px;
+}
+
+.header-language-txt {
+    font-size: 15px;
+    font-weight: lighter;
+    position: absolute;
+    padding-top: 7px;
+    margin-left: 5px;
+}

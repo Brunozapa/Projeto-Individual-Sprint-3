@@ -114,3 +114,38 @@
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
 }
+
+.midia {
+    width: 100%;
+    margin-top: 13px;
+    height: 800px;
+}
+
+.video {
+    width: 100%;
+    text-align: center;
+}
+
+.video iframe {
+    margin: auto;
+}
+
+.tweet-box {
+    max-width: 75%;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.tweet1 {
+    margin: auto;
+    width: 48%;
+    height: 200px;
+    float: left;
+}
+
+.tweet2 {
+    margin: auto;
+    width: 48%;
+    height: 200px;
+    float: right;
+}
