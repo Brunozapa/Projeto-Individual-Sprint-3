@@ -1,0 +1,126 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.div-voltar {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.container-login {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.box-login {
+    margin: auto;
+    max-width: 500px;
+    height: 100%;
+}
+
+.div-img-login {
+    margin: auto;
+    width: 360px;
+    height: 85px;
+}
+
+.div-img-login img {
+    height: 75px;
+    float: left;
+}
+
+.div-language {
+    margin-top: 50px;
+}
+
+.box-language {
+    max-width: 120px;
+    margin: auto;
+}
+
+.select-language {
+    margin: auto;
+    width: 125px;
+    height: 30px;
+    background-color: white;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.div-input-login {
+    margin-top: 10px;
+}
+
+.box-input-login {
+    margin: auto;
+    height: 200px;
+    width: 270px;
+}
+
+.box-input-login span {
+    margin-top: 25px;
+    width: 270px;
+    float: left;
+}
+
+.box-input-login input {
+    width: 267px;
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid goldenrod;
+    outline: none;
+    font-size: 15px;
+    color: rgb(77, 77, 77);
+}
+
+.esq-senha {
+    margin: auto;
+    text-align: center;
+    width: 270px;
+}
+
+.esq-senha u:hover {
+    background-color: transparent;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+.div-btn-entrar {
+    margin: auto;
+    width: 270px;
+}
+
+.btn-entrar {
+    text-align: center;
+    margin-top: 15px;
+    width: 270px;
+    height: 50px;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    border: 0px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-entrar:hover {
+    background-color: goldenrod;
+}
+
+input.error {
+    border-color: red;
+}

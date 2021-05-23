@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
+    <script src="ScriptsLC/languages-selector.js"></script>
+    <script src="ScriptsLC/script-login.js"></script>
+    <style>
+        @font-face {
+            font-family: 'NBA Hornets Buzz City';
+            src: url('Projeto-Santastico\Fontes\NBA_Hornets_Buzz_City');
+        }
+        
+        @font-face {
+            font-family: 'Effra Heavy';
+            src: url('Projeto-Santastico\Fontes\Effra\Effra Heavy.ttf');
+        }
+    </style>
+    <title>Login | Santos Futebol Clube</title>
+</head>
+
+<body>
+    <div class="div-voltar"> <a href="../Home/home-en.html"><i class="fas fa-angle-left"></i> <u>Back</u></div></a>
+        <div id="pag_login" class="container-login">
+            <div class="box-login">
+                <div class="div-img-login">
+                    <img src="ImagensLC/santos-logo-escudo.png" alt="escudo do santos" style="margin-right: 25px;">
+                    <img src="ImagensLC/o-maior-brasileiro-do-mundo.png" alt="o maior brasileiro da terra">
+                </div>
+                <div class="div-language">
+                    <div class="box-language">
+                        <select onchange="slcIdioma()" id="idIdioma" class="select-language">
+                        <option value="en">English</option>
+                        <option value="pt">Português(BR)</option>
+                        <option value="es">Español</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="div-input-login">
+                    <form id="form_login" method="POST" onsubmit="return entrar()" class="box-input-login">
+                        <span>
+                        Email <br>
+                        <input type="email" placeholder="Digite seu email" name="email" id="id_email">
+                    </span>
+                        <span>
+                        Password <br>
+                        <input type="password" placeholder="Digite sua senha" name="senha" id="id_senha">
+                    </span>
+
+                </div>
+                <div id="erro_login" class="esq-senha"></div>
+                <div class="div-btn-entrar">
+                    <button id="btn_entrar" class="btn-entrar">Advance</button>
+                </div>
+                </form>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------- -->
+        <div class="container-cadastro">
+            <div class="sem-cadastro" id="sem_cadastro">
+                <div class="sem-cadastro-txt" style="display: block;">
+
+                    <h1> Join to Meu Santos! </h1> Here the fan is closer to your team! <br> You have exclusive access to offers, sweepstakes and news! <br> <button onclick="mostrar()">Join us</button>
+                </div>
+            </div>
+            <div class="main-cadastro" id="main_cadastro" style="display: none;">
+                <div class="main-cadastro-box">
+                    <h1>CREATE AN ACCOUNT</h1>
+                    <form id="form_cadastro" method="POST" onsubmit="return cadastrar()" class="form-cadastro">
+                        <div class="div-inp">
+                            <span class="inp-left">First Name<input class="inp-cadastro" type="text" id="primeiro_nome"></span>
+                            <span class="inp-right">Last Name<input class="inp-cadastro" type="text" id="ultimo_nome"></span>
+                        </div>
+                        <div class="div-inp">
+                            <span class="inp-mid">Email<input class="inp-cadastro" type="text" id="email_cad"></span>
+                        </div>
+                        <div class="div-inp">
+                            <span class="inp-left">Password<input class="inp-cadastro" type="password" id="senha1"></span>
+                            <span class="inp-right">Favorit Player<select class="inp-cadastro" type="text" name="jogador">
+                                <option disabled selected></option>
+                                <option style="color: black;" value="1">Alisson</option>
+                                <option style="color: black;" value="2">Angelo</option>
+                                <option style="color: black;" value="3">Baliero</option>
+                                <option style="color: black;" value="4">Copete</option>
+                                <option style="color: black;" value="5">Felipe Jonathan</option>
+                                <option style="color: black;" value="6">Jhon</option>
+                                <option style="color: black;" value="7">João Paulo</option>
+                                <option style="color: black;" value="8">Kaiky</option>
+                                <option style="color: black;" value="9">Luan Peres</option>
+                                <option style="color: black;" value="10">Lucas Braga</option>
+                                <option style="color: black;" value="11">Lucas Lourenço</option>
+                                <option style="color: black;" value="12">Marcos Leonardo</option>
+                                <option style="color: black;" value="13">Madson</option>
+                                <option style="color: black;" value="14">Marinho</option>
+                                <option style="color: black;" value="15">Pará</option>
+                                <option style="color: black;" value="16">Pirani</option>
+                                <option style="color: black;" value="17">Sanchez</option>
+                                <option style="color: black;" value="18">Sandry</option>
+                                <option style="color: black;" value="19">Kaio Jorge</option>
+                            </select></span> </div>
+                        <div class="div-inp">
+                            <span class="inp-bot">Birthday<input class="inp-cadastro" type="date" id="aniversario"></span>
+                            <span class="inp-bot">Country<select class="inp-cadastro" type="text" id="pais">
+                                <option style="color: black;" value="ANG">Angola</option>
+                                <option style="color: black;" value="ARG">Argentina</option> 
+                                <option style="color: black;" value="AUS">Australia</option> 
+                                <option style="color: black;" value="BOL">Bolivia</option> 
+                                <option style="color: black;" value="BRA" selected="selected">Brazil</option> 
+                                <option style="color: black;" value="CHI">Chile</option>
+                                <option style="color: black;" value="CHN">China</option> 
+                                <option style="color: black;" value="COL">Colombia</option> 
+                                <option style="color: black;" value="EQU">Ecuador</option>
+                                <option style="color: black;" value="FRA">France</option>
+                                <option style="color: black;" value="GER">Germany</option>
+                                <option style="color: black;" value="IND">India</option>
+                                <option style="color: black;" value="ITA">Italy</option>
+                                <option style="color: black;" value="JAP">Japan</option>
+                                <option style="color: black;" value="MEX">Mexico</option>
+                                <option style="color: black;" value="MOC">Mozambique</option>
+                                <option style="color: black;" value="HOL">Netherlands</option>
+                                <option style="color: black;" value="PAR">Paraguay</option>
+                                <option style="color: black;" value="PER">Peru</option>
+                                <option style="color: black;" value="POR">Portugal</option>
+                                <option style="color: black;" value="RUS">Russia</option>
+                                <option style="color: black;" value="ESP">Spain</option>
+                                <option style="color: black;" value="RNU">United Kingdom</option>
+                                <option style="color: black;" value="EUA">United States of America</option>
+                                <option style="color: black;" value="URU">Uruguay</option></select></span>
+                            <span class="inp-right">Language<select class="inp-cadastro" type="text" name="idioma"><option disabled selected></option><option style="color: black;" value="Portugues">Portuguese</option><option style="color: black;" value="Espanhol">Spanish</option><option style="color: black;" value="Ingles">English</option></select></span>
+
+                        </div>
+                        <div style="text-align: center;">
+                            <button class="btn-cadastro">Confirm</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+</body>
+
+</html>
+<script>
+    /* function entrar() {
+                aguardar();
+                var formulario = new URLSearchParams(new FormData(form_login));
+                fetch("/usuarios/autenticar", {
+                    method: "POST",
+                    body: formulario
+                }).then(resposta => {
+
+                    if (resposta.ok) {
+
+                        resposta.json().then(json => {
+
+                            sessionStorage.login_usuario_meuapp = json.idUsuario;
+                            sessionStorage.primeiro_nome_usuario_meuapp = json.primeiroNome;
+                            sessionStorage.segundo_nome_usuario_meuapp = json.segundoNome;
+                            sessionStorage.foto_perfil_usuario_meuapp = json.fkJogador;
+                            sessionStorage.idioma_usuario_meuapp = json.idioma;
+
+                            window.location.href = '../Home/perfil-en.html';
+                        });
+
+                    } else {
+
+                        console.log('Erro de login!');
+
+                        id_email.classList.add('error');
+                        id_senha.classList.add('error');
+
+                        resposta.text().then(texto => {
+                            console.error(texto);
+                            finalizar_aguardar(texto);
+                        });
+                    }
+                });
+
+                return false;
+            }
+
+            function aguardar() {
+                btn_entrar.disabled = true;
+                erro_login.style.visibility = 'hidden';
+            }
+
+            function finalizar_aguardar(resposta) {
+                btn_entrar.disabled = false;
+                erro_login.style.visibility = 'visible';
+                erro_login.innerHTML = resposta;
+            }
+
+         */
+    function cadastrar() {
+
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function(response) {
+
+            if (response.ok) {
+
+                window.location.href = '#login';
+
+            } else {
+                alert('Successful registration')
+                console.log('Erro de Registro!');
+                response.text().then(function(resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+    }
+
+    function aguardar() {
+        btn_cad.disabled = true;
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn_cad.disabled = false;
+        div_erro.style.display = 'block';
+    }
+</script>

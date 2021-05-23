@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
+    <script src="ScriptsLC/languages-selector.js"></script>
+    <script src="ScriptsLC/script-login.js"></script>
+    <style>
+        @font-face {
+            font-family: 'NBA Hornets Buzz City';
+            src: url('Projeto-Santastico\Fontes\NBA_Hornets_Buzz_City');
+        }
+        
+        @font-face {
+            font-family: 'Effra Heavy';
+            src: url('Projeto-Santastico\Fontes\Effra\Effra Heavy.ttf');
+        }
+    </style>
+    <title>Login | Santos Futebol Clube</title>
+</head>
+
+<body>
+    <div class="div-voltar"> <a href="../Home/home-es.html"><i class="fas fa-angle-left"></i> <u>Voltar</u>  </div></a>
+        <div id="pag_login" class="container-login">
+            <div class="box-login">
+                <div class="div-img-login">
+                    <img src="ImagensLC/santos-logo-escudo.png" alt="escudo do santos" style="margin-right: 25px;">
+                    <img src="ImagensLC/o-maior-brasileiro-do-mundo.png" alt="o maior brasileiro da terra">
+                </div>
+                <div class="div-language">
+                    <div class="box-language">
+                        <select onchange="slcIdioma()" id="idIdioma" class="select-language">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="pt">Português(BR)</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="div-input-login">
+                    <form id="form_login" method="POST" onsubmit="return entrar()" class="box-input-login">
+                        <span>
+                        Email <br>
+                        <input type="email" placeholder="Escreba su email" name="email" id="id_email">
+                    </span>
+                        <span>
+                        Contraseña <br>
+                        <input type="password" placeholder="Escreba su senha" name="senha" id="id_senha">
+                    </span>
+
+                </div>
+                <div id="erro_login" class="esq-senha"></div>
+                <div class="div-btn-entrar">
+                    <button id="btn_entrar" class="btn-entrar">Avance</button>
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- -------------------------------------------------- -->
+        <div class="container-cadastro">
+            <div class="sem-cadastro" id="sem_cadastro">
+                <div class="sem-cadastro-txt" style="display: block;">
+                    <h1>¡Únete a Meu Santos!</h1> ¡Aquí el aficionado está más cerca de tu equipo! <br> ¡Tienes acceso exclusivo a ofertas, sorteos y noticias! <br>
+                    <button onclick="mostrar()">Registrarse</button>
+                </div>
+            </div>
+            <div class="main-cadastro" id="main_cadastro" style="display: none;">
+                <div class="main-cadastro-box">
+                    <h1>Crear Una Cuenta</h1>
+                    <form id="form_cadastro" method="POST" onsubmit="return cadastrar()" class="form-cadastro">
+                        <div class="div-inp">
+                            <span class="inp-left">Primero Nombre<input class="inp-cadastro" type="text" name="primeiro_nome"></span>
+                            <span class="inp-right">Último Nombre<input class="inp-cadastro" type="text" name="ultimo_nome"></span>
+                        </div>
+                        <div class="div-inp">
+                            <span class="inp-mid">Email<input class="inp-cadastro" type="text" name="email_cad"></span>
+                        </div>
+                        <div class="div-inp">
+                            <span class="inp-left">Contraseña<input class="inp-cadastro" type="password" name="senha1"></span>
+                            <span class="inp-right">Jugador Favorito<select class="inp-cadastro" type="text" name="jogador">
+                                <option disabled selected></option>
+                                <option style="color: black;" value="1">Alisson</option>
+                                <option style="color: black;" value="2">Angelo</option>
+                                <option style="color: black;" value="3">Baliero</option>
+                                <option style="color: black;" value="4">Copete</option>
+                                <option style="color: black;" value="5">Felipe Jonathan</option>
+                                <option style="color: black;" value="6">Jhon</option>
+                                <option style="color: black;" value="7">João Paulo</option>
+                                <option style="color: black;" value="8">Kaiky</option>
+                                <option style="color: black;" value="9">Luan Peres</option>
+                                <option style="color: black;" value="10">Lucas Braga</option>
+                                <option style="color: black;" value="11">Lucas Lourenço</option>
+                                <option style="color: black;" value="12">Marcos Leonardo</option>
+                                <option style="color: black;" value="13">Madson</option>
+                                <option style="color: black;" value="14">Marinho</option>
+                                <option style="color: black;" value="15">Pará</option>
+                                <option style="color: black;" value="16">Pirani</option>
+                                <option style="color: black;" value="17">Sanchez</option>
+                                <option style="color: black;" value="18">Sandry</option>
+                                <option style="color: black;" value="19">Kaio Jorge</option>
+                            </select></span> </div>
+                        <div class="div-inp">
+                            <span class="inp-bot">Cumpleaños<input class="inp-cadastro" type="date" name="aniversario"></span>
+                            <span class="inp-bot">País<select class="inp-cadastro" type="text" name="pais">
+                                <option style="color: black;" value="ALE">Alemania</option>
+                                <option style="color: black;" value="ANG">Angola</option>
+                                <option style="color: black;" value="ARG">Argentina</option>
+                                <option style="color: black;" value="AUS">Australia</option>
+                                <option style="color: black;" value="BOL">Bolivia</option>
+                                <option style="color: black;" value="BRA" selected="selected">Brasil</option>
+                                <option style="color: black;" value="CHI">Chile</option>
+                                <option style="color: black;" value="CHN">China</option> 
+                                <option style="color: black;" value="COL">Colombia</option>
+                                <option style="color: black;" value="EQU">Ecuador</option>
+                                <option style="color: black;" value="ESP">España</option>
+                                <option style="color: black;" value="EUA">Estados Unidos</option>
+                                <option style="color: black;" value="FRA">Francia</option>
+                                <option style="color: black;" value="HOL">Holanda</option>
+                                <option style="color: black;" value="ITA">Italia</option>
+                                <option style="color: black;" value="JAP">Japón</option>
+                                <option style="color: black;" value="MOC">Mozambique</option>
+                                <option style="color: black;" value="MEX">México</option>>
+                                <option style="color: black;" value="PAR">Paraguay</option>
+                                <option style="color: black;" value="PER">Perú</option>
+                                <option style="color: black;" value="POR">Portugal</option>
+                                <option style="color: black;" value="RNU">Reino Unido</option>
+                                <option style="color: black;" value="RUS">Rusia</option>
+                                <option style="color: black;" value="URU">Uruguay</option>
+                                </select></span>
+                            <span class="inp-right">Idioma<select class="inp-cadastro" type="text" name="idioma"><option disabled selected></option><option style="color: black;" value="Portugues">Portugués</option><option style="color: black;" value="Espanhol">Español</option><option style="color: black;" value="Ingles">Inglés</option></select></span>
+
+                        </div>
+                        <div style="text-align: center;">
+                            <input value="registre-se" type="submit" id="btn_cad" class="btn-cadastro"></input>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+</body>
+
+</html>
+<script>
+    /*     function entrar() {
+                        aguardar();
+                        var formulario = new URLSearchParams(new FormData(form_login));
+                        fetch("/usuarios/autenticar", {
+                            method: "POST",
+                            body: formulario
+                        }).then(resposta => {
+
+                            if (resposta.ok) {
+
+                                resposta.json().then(json => {
+
+                                    sessionStorage.login_usuario_meuapp = json.idUsuario;
+                                    sessionStorage.primeiro_nome_usuario_meuapp = json.primeiroNome;
+                                    sessionStorage.segundo_nome_usuario_meuapp = json.segundoNome;
+                                    sessionStorage.foto_perfil_usuario_meuapp = json.fkJogador;
+                                    sessionStorage.idioma_usuario_meuapp = json.idioma;
+
+                                    window.location.href = '../Home/perfil-es.html';
+                                });
+
+                            } else {
+
+                                console.log('Erro de login!');
+
+                                id_email.classList.add('error');
+                                id_senha.classList.add('error');
+
+                                resposta.text().then(texto => {
+                                    console.error(texto);
+                                    finalizar_aguardar(texto);
+                                });
+                            }
+                        });
+
+                        return false;
+                    }
+
+                    function aguardar() {
+                        btn_entrar.disabled = true;
+                        erro_login.style.visibility = 'hidden';
+                    }
+
+                    function finalizar_aguardar(resposta) {
+                        btn_entrar.disabled = false;
+                        erro_login.style.visibility = 'visible';
+                        erro_login.innerHTML = resposta;
+                    }
+                 */
+
+    function cadastrar() {
+
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function(response) {
+
+            if (response.ok) {
+                alert('Exito en registro');
+                window.location.href = '#login';
+
+            } else {
+
+                console.log('Erro de Registro!');
+                response.text().then(function(resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+    }
+
+    function aguardar() {
+        btn_cad.disabled = true;
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn_cad.disabled = false;
+        div_erro.style.display = 'block';
+    }
+</script>

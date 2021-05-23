@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/header.css">
+    <link rel="stylesheet" href="Css/perfil.css">
+    <link rel="stylesheet" href="Css/foooter.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Imagens/santos-logo-escudo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
+    <script src="Scripts/languages-selector.js"></script>
+    <script src="Scripts/perfil.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js" integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A==" crossorigin="anonymous"></script>
+    <style>
+        @font-face {
+            font-family: 'NBA Hornets Buzz City';
+            src: url('Projeto-Santastico\Fontes\NBA_Hornets_Buzz_City');
+        }
+        
+        @font-face {
+            font-family: 'Effra Heavy';
+            src: url('Projeto-Santastico\Fontes\Effra\Effra Heavy.ttf');
+        }
+    </style>
+    <title>Santos Futebol Clube</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-small">
+            <div class="header-small-box">
+                <img class="patrocionios-header-img" src="Imagens/Patrocinios/patrocinios_header.png">
+                <!-- Combo box para selecionar o idioma -->
+
+                <div class="header-language-select">
+                    <div onclick="slcIdioma()" id="languageSelection" class="header-language-select-main" style="display: block;">
+                        <img src="Imagens/Bandeiras/Brasil.png" class="header-language-main-img">
+                        <span class="header-language-main-txt"> BRA <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <ul id="languageOptions" class="header-language-combo-box" style="display: none;">
+                        <li>
+                            <a href="home-pt.html">
+                                <img src="Imagens/Bandeiras/Brasil.png" class="header-language-img">
+                                <span class="header-language-txt">BRA  <i class="fas fa-angle-up"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="home-en.html">
+                                <img src="Imagens/Bandeiras/UK.png" class="header-language-img">
+                                <span class="header-language-txt">ENG <i class="fas fa-angle-up"></i></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="home-es.html">
+                                <img src="Imagens/Bandeiras/Espanha.jpg" class="header-language-img">
+                                <span class="header-language-txt">ESP <i class="fas fa-angle-up"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+    </header>
+
+    <section id="separacao" class="separacao-section">
+        <!-- header transparente -->
+        <div class="header-large">
+            <div class="header-div-logo">
+                <div class="header-box-logo"><img class="logo-header-img" src="Imagens/Escudos/santos-logo-escudo.png"></div>
+                <nav class="header-navbar">
+                    <ul>
+                        <li class="nav-list"><a href="home-pt.html#partidas"> Partidos </a></li>
+                        <li class="nav-list"><a href="home-pt.html#noticias">Noticias</a></li>
+                        <li class="nav-list"><a href="home-pt.html#sociorei">Sócio Rei</a></li>
+                        <li class="nav-list"><a href="home-pt.html#loja">Tienda</a></li>
+                        <li class="nav-list"><a href="home-pt.html"><i class="fas fa-arrow-circle-left"></i> Vuelver</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- separacao -->
+        <div class="perfil-infos">
+            <div class="perfil-infos-container">
+                <div class="perfil-infos-box">
+                    <img class="infos-img" id="img_perfil" src="" alt="foto de perfil">
+                    <h1 class="infos-txt" id="b_usuario"></h1>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <div class="container-perfil">
+        <div class="nav-perfil">
+            <button id="nav1" onclick="detalhes()" class="navbar">Detalles de la cuenta</button>
+            <button id="nav2" onclick="jogador()" class="navbar"><span>Jugador Favorito</span></button>
+            <button id="nav3" onclick="grafico()" class="navbar"><span>Favorito de la Hinchada</span></button>
+            <button id="nav4" onclick="sair()" class="navbar"><span>Salir</span></button>
+        </div>
+        <div class="perfil-box">
+            <div id="div_detalhes" class="detalhes" style="display: block;">
+                <div class="div-left">
+                    <span class="inp-left">Primero Nombre<div class="inp-cadastro" id="b_primeiro_nome" ></div></span>
+                    <span class="inp-left">Email<div class="inp-cadastro" id="b_email"></div></span>
+                    <span class="inp-left">Pais<div class="inp-cadastro" id="b_pais"></div></span>
+                </div>
+                <div class="div-right">
+                    <span class="inp-right">Ultimo Nombre<div class="inp-cadastro" id="b_ultimo_nome"></div></span>
+                    <span class="inp-right">Aniversario<div class="inp-cadastro" id="b_aniversario"></div></span>
+                    <span class="inp-right">Idioma<div class="inp-cadastro" id="b_idioma"></div></span>
+                </div>
+                <!--                 <div style="text-align: center;">
+                    <button onclick="registro()" class="btn-cadastro">Salvar Mudanças</button>
+                </div> -->
+
+            </div>
+            <div id="div_jogador" class="jogador" style="display: none;">
+                <img id="img_jogador" src="" class="img-jogador" alt="">
+                <div class="infos-jogador">
+                    <h1 id="b_nome_jogador"></h1>
+                    <ul>
+                        <li id="b_posicao"></li>
+                        <li id="b_camisa"></li>
+                        <li id="b_idade"></li>
+                    </ul>
+                    <h4 id="b_nacionalidade"></h4>
+                </div>
+                <!-- selecao de jogador -->
+                <div class="select-jogador">
+                    <div onclick="ocultarExibir()" id="JogadorFavorito" style="display: block;">
+                        <span class="main-select-jogador"> Cambiar Jugador <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div id="jogador_combobox" class="jogador-combobox" style="display: none;">
+                        <div class="ul-top">
+                            <ul>
+                                <li><span> <h4>Atacantes</h4></span></li>
+                                <li onclick="slcJogador()" id="jogador" value="jorge"><span class="jogador-txt"> Kaio Jorge</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="leonardo"><span class="jogador-txt"> M. Leonardo</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="marinho"><span class="jogador-txt"> Marinho</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="braga"><span class="jogador-txt"> Lucas Braga</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="angelo"><span class="jogador-txt"> Angelo</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="copete"><span class="jogador-txt"> Copete</span></li>
+                            </ul>
+                            <ul>
+                                <li><span> <h4>Meio Campistas</h4></span></li>
+                                <li onclick="slcJogador()" id="jogador" value="pirani"><span class="jogador-txt"> G. Pirani</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="lourenco"><span class="jogador-txt"> L. Lourenço</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="baliero"><span class="jogador-txt"> V. Baliero</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="sandry"><span class="jogador-txt"> Sandry</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="alisson"><span class="jogador-txt"> Alisson</span></li>
+                            </ul>
+                        </div>
+                        <div class="ul-bot">
+                            <ul>
+                                <li> <span> <h4>Defensor</h4></span></li>
+                                <li onclick="slcJogador()" id="jogador" value="jonathan"><span class="jogador-txt"> Felipe Jonathan</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="para"><span class="jogador-txt"> Pará</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="peres"><span class="jogador-txt"> Luan Peres</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="kayke"><span class="jogador-txt"> Kayke</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="madson"><span class="jogador-txt"> Madson</span></li>
+                            </ul>
+
+                            <ul>
+                                <li> <span> <h4>Goleiro</h4></span></li>
+                                <li onclick="slcJogador()" id="jogador" value="joaopaulo"><span class="jogador-txt"> João Paulo</span></li>
+                                <li onclick="slcJogador()" id="jogador" value="jhon"><span class="jogador-txt"> Jhon</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="div_grafico" class="grafico" style="display: none;">
+                <div class="chart" style="width: 600px; height: 600px;">
+                    <canvas id="chart" width="500" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 300px;"></canvas>
+                </div>
+                <div class="favorito">
+                    <img id="img_grafico" src="" alt="Jogador favorito da torcida">
+                </div>
+            </div>
+            <div id="div_sair" class="sair" style="display: none;">
+                <h1> ¿Realmente quieres irte? </h1>
+                <button class="btn-cadastro" onclick="logoff()">Salir</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-home">
+        <div class="footer-main-container">
+            <div class="footer-logo-container">
+                <div class="footer-logo-div">
+                    <img class="footer-logo-img" src="Imagens/Escudos/santos-logo-escudo-com-estrela.png" alt="escudo do santos">
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="footer-social-media-box">
+                    <div class="footer-social-media">
+                        <a href="https://www.facebook.com/santosfc" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/santosfc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC0uRT_armQXqds_rjTjqJ0g" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@santosfc?lang=pt_BR" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://twitter.com/SantosFC" target="_blank"><i class="fab fa-twitter"></i></a> </div>
+                    <div class="footer-social-media-txt">
+                        <span> Redes Sociales Oficiales</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-tiny">
+            <span class="footer-tiny-left"> Desarrollado por Bruno Zapateiro Silva</span>
+            <span class="footer-tiny-right"> Copyright © 2021 - Santos Futebol Clube</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    verificar_autenticacao();
+</script>
