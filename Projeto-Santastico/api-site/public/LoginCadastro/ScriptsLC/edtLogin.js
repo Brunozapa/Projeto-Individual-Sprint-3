@@ -4,6 +4,7 @@ function slcIdioma() {
     idioma = idIdioma.value;
 
     if (idioma == 'pt') {
+        div_voltar.innerHTML = '<a href="../Home/home-pt.html"><i class="fas fa-angle-left"></i> <u>Voltar</u> </a> '
         form_login.innerHTML = `
         <span>
         Email <br>
@@ -33,11 +34,12 @@ function slcIdioma() {
         cad_ani.innerHTML = 'Aniversário';
         cad_pais.innerHTML = 'País';
         cad_idi.innerHTML = 'Idioma';
-        btn_cad.value = 'Registri-se';
+        btn_cad.value = 'Registre-se';
 
 
     }
     if (idioma == 'en') {
+        div_voltar.innerHTML = '<a href="../Home/home-en.html"><i class="fas fa-angle-left"></i> <u>Back</u> </a> '
         form_login.innerHTML = `
         <span>
         Email <br>
@@ -72,6 +74,7 @@ function slcIdioma() {
 
     }
     if (idioma == 'es') {
+        div_voltar.innerHTML = '<a href="../Home/home-es.html"><i class="fas fa-angle-left"></i> <u>Vuelver</u> </a> '
         form_login.innerHTML = `
         <span>
         Email <br>
@@ -118,7 +121,7 @@ function mostrar_pt() {
     cad_ani.innerHTML = 'Aniversário';
     cad_pais.innerHTML = 'País';
     cad_idi.innerHTML = 'Idioma';
-    btn_cad.value = 'Registri-se';
+    btn_cad.value = 'Registre-se';
 }
 
 function mostrar_en() {

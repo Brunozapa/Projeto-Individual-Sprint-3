@@ -110,5 +110,26 @@ router.get('/estatisticas', function(req, res, next) {
 
 });
 
+/* Recuperar os jogadores mais votados */
+router.get('/favorito', function(req, res, next) {
 
+    console.log(`Recuperando os jogadores favoritos`);
+    if (env == 'dev') {
+
+        var instrucaoSql = `select fkJogador as jogFav,count(*) as count from usuario group by fkJogador order by count desc limit 1;`;
+    } else if (env == 'production') {
+
+        var instrucaoSql = `select fkJogador as jogFav,count(*) as count from usuario group by fkJogador order by count desc limit 1;`;
+    }
+
+
+    sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
+        .then(resultado => {
+            res.json(resultado[0]);
+        }).catch(erro => {
+            console.error(erro);
+            res.status(500).send(erro.message);
+        });
+
+});
 module.exports = router;

@@ -7,6 +7,7 @@ function load() {
     div_jogador.style.display = 'none';
     div_sair.style.display = 'none';
     div_descontos.style.display = 'none';
+
 }
 
 function detalhes() {
@@ -18,6 +19,7 @@ function detalhes() {
     div_jogador.style.display = 'none';
     div_sair.style.display = 'none';
     div_descontos.style.display = 'none';
+
 
 }
 
@@ -31,6 +33,7 @@ function jogador() {
     div_sair.style.display = 'none';
     div_descontos.style.display = 'none';
 
+
 }
 
 function descontos() {
@@ -43,17 +46,19 @@ function descontos() {
     div_descontos.style.display = 'block';
     div_sair.style.display = 'none';
 
+
 }
 
 function sair() {
     nav4.classList.add('selecionado');
-    nav3.classList.remove('selecionado');
     nav1.classList.remove('selecionado');
     nav2.classList.remove('selecionado');
+    nav3.classList.remove('selecionado');
     div_detalhes.style.display = 'none';
     div_jogador.style.display = 'none';
     div_descontos.style.display = 'none';
     div_sair.style.display = 'block';
+    div_fav.style.display = 'none';
 
 }
 
@@ -170,6 +175,7 @@ function verificar_autenticacao() {
             b_idade.innerHTML = `${idade} anos`;
             b_nacionalidade.innerHTML = `<img src="Imagens/Bandeiras/${nacionalidade}.png" class="header-language-img"> ${nacionalidade}`;
 
+            /* sorteia cupom */
             var cupom_usuario = vetor_cupons[sorteio_cupom];
             if (cupom_usuario == '') {
                 titulo_descontos.innerHTML = 'Desculpa, nenhum cupom de desconto disponivel.';

@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
     <script src="ScriptsLC/languages-selector.js"></script>
     <script src="ScriptsLC/script-login.js"></script>
+    <link rel="shortcut icon" href="Imagens/Escudos/santos-logo-escudo.png" type="image/x-icon">
     <style>
         @font-face {
             font-family: 'NBA Hornets Buzz City';
@@ -150,54 +151,54 @@
 </html>
 <script>
     /*     function entrar() {
-                            aguardar();
-                            var formulario = new URLSearchParams(new FormData(form_login));
-                            fetch("/usuarios/autenticar", {
-                                method: "POST",
-                                body: formulario
-                            }).then(resposta => {
+                                aguardar();
+                                var formulario = new URLSearchParams(new FormData(form_login));
+                                fetch("/usuarios/autenticar", {
+                                    method: "POST",
+                                    body: formulario
+                                }).then(resposta => {
 
-                                if (resposta.ok) {
+                                    if (resposta.ok) {
 
-                                    resposta.json().then(json => {
+                                        resposta.json().then(json => {
 
-                                        sessionStorage.login_usuario_meuapp = json.idUsuario;
-                                        sessionStorage.primeiro_nome_usuario_meuapp = json.primeiroNome;
-                                        sessionStorage.segundo_nome_usuario_meuapp = json.segundoNome;
-                                        sessionStorage.foto_perfil_usuario_meuapp = json.fkJogador;
-                                        sessionStorage.idioma_usuario_meuapp = json.idioma;
+                                            sessionStorage.login_usuario_meuapp = json.idUsuario;
+                                            sessionStorage.primeiro_nome_usuario_meuapp = json.primeiroNome;
+                                            sessionStorage.segundo_nome_usuario_meuapp = json.segundoNome;
+                                            sessionStorage.foto_perfil_usuario_meuapp = json.fkJogador;
+                                            sessionStorage.idioma_usuario_meuapp = json.idioma;
 
-                                        window.location.href = '../Home/perfil-es.html';
-                                    });
+                                            window.location.href = '../Home/perfil-es.html';
+                                        });
 
-                                } else {
+                                    } else {
 
-                                    console.log('Erro de login!');
+                                        console.log('Erro de login!');
 
-                                    id_email.classList.add('error');
-                                    id_senha.classList.add('error');
+                                        id_email.classList.add('error');
+                                        id_senha.classList.add('error');
 
-                                    resposta.text().then(texto => {
-                                        console.error(texto);
-                                        finalizar_aguardar(texto);
-                                    });
-                                }
-                            });
+                                        resposta.text().then(texto => {
+                                            console.error(texto);
+                                            finalizar_aguardar(texto);
+                                        });
+                                    }
+                                });
 
-                            return false;
-                        }
+                                return false;
+                            }
 
-                        function aguardar() {
-                            btn_entrar.disabled = true;
-                            erro_login.style.visibility = 'hidden';
-                        }
+                            function aguardar() {
+                                btn_entrar.disabled = true;
+                                erro_login.style.visibility = 'hidden';
+                            }
 
-                        function finalizar_aguardar(resposta) {
-                            btn_entrar.disabled = false;
-                            erro_login.style.visibility = 'visible';
-                            erro_login.innerHTML = resposta;
-                        }
-                     */
+                            function finalizar_aguardar(resposta) {
+                                btn_entrar.disabled = false;
+                                erro_login.style.visibility = 'visible';
+                                erro_login.innerHTML = resposta;
+                            }
+                         */
 
     function cadastrar() {
 

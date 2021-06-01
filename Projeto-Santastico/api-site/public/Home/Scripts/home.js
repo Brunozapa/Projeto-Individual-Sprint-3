@@ -40,3 +40,47 @@ function verificar_autenticacao() {
             });
     }
 }
+
+function recuperar_favorito() {
+    fetch("/leituras/favorito", {
+        method: "GET",
+    }).then(resposta => {
+
+        if (resposta.ok) {
+
+            resposta.json().then(json => {
+                /* sessionStorage.favorito_da_galera = json.jogFav; */
+                var favorito_da_galera = json.jogFav;
+                var posicao = favorito_da_galera - 1;
+                var nome = vetor_nome[posicao];
+                var img1 = document.querySelector("#img_fav");
+
+                txt_fav.innerHTML = `${nome}`;
+                img1.setAttribute('src', `Imagens/Jogadores/${nome}.png`);
+            });
+
+        }
+    });
+}
+
+function recuperar_favorito_index() {
+    fetch("/leituras/favorito", {
+        method: "GET",
+    }).then(resposta => {
+
+        if (resposta.ok) {
+
+            resposta.json().then(json => {
+                /* sessionStorage.favorito_da_galera = json.jogFav; */
+                var favorito_da_galera = json.jogFav;
+                var posicao = favorito_da_galera - 1;
+                var nome = vetor_nome[posicao];
+                var img1 = document.querySelector("#img_fav");
+
+                txt_fav.innerHTML = `${nome}`;
+                img1.setAttribute('src', `Home/Imagens/Jogadores/${nome}.png`);
+            });
+
+        }
+    });
+}

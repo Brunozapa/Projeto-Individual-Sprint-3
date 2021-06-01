@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Css/partidas.css">
     <link rel="stylesheet" href="Css/noticias.css">
     <link rel="stylesheet" href="Css/sociorei.css">
+    <link rel="stylesheet" href="Css/favorito.css">
     <link rel="stylesheet" href="Css/loja.css">
     <link rel="stylesheet" href="Css/foooter.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,6 +20,8 @@
     <link rel="shortcut icon" href="Imagens/santos-logo-escudo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
     <script src="Scripts/languages-selector.js"></script>
+    <script src="Scripts/home.js"></script>
+    <link rel="shortcut icon" href="Imagens/Escudos/santos-logo-escudo.png" type="image/x-icon">
     <style>
         @font-face {
             font-family: 'NBA Hornets Buzz City';
@@ -83,6 +86,7 @@
                         <li class="nav-list"><a href="#partidas"> Partidas </a></li>
                         <li class="nav-list"><a href="#noticias">Noticias</a></li>
                         <li class="nav-list"><a href="#sociorei">Sócio Rei</a></li>
+                        <li class="nav-list"><a href="#favorito">Favorito</a></li>
                         <li class="nav-list"><a href="#loja">Loja</a></li>
                         <li class="nav-list"><a href="../LoginCadastro/login.html"><i class="fas fa-sign-in-alt"></i> Entrar</li></a>
                     </ul>
@@ -231,6 +235,17 @@
                 </div>
             </div>
         </section>
+        <section id="favorito">
+            <h1 style="font-size: 30px;">Favorito da Galera</h1>
+            <div class="box-favorito">
+                <div>
+                    <img src="" class="img-fav" id="img_fav">
+                    <img src="Imagens/medalha.png" class="medalha">
+                </div>
+
+                <div id="txt_fav" class="txt-fav"></div>
+            </div>
+        </section>
     </div>
 
     <section id="loja" class="loja-section">
@@ -293,4 +308,5 @@
 
 </html>
 <script>
+    recuperar_favorito()
 </script>

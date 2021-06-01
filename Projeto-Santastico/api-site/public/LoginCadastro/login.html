@@ -13,6 +13,7 @@
     <script src="ScriptsLC/languages-selector.js"></script>
     <script src="ScriptsLC/script-login.js"></script>
     <script src="ScriptsLC/edtLogin.js"></script>
+    <link rel="shortcut icon" href="../Home/Imagens/Escudos/santos-logo-escudo.png" type="image/x-icon">
     <style>
         @font-face {
             font-family: 'NBA Hornets Buzz City';
@@ -28,62 +29,62 @@
 </head>
 
 <body>
-    <div class="div-voltar"> <a href="../Home/home-pt.html"><i class="fas fa-angle-left"></i> <u>Voltar</u>  </div></a>
-        <div id="pag_login" class="container-login">
-            <div class="box-login">
-                <div class="div-img-login">
-                    <img src="ImagensLC/santos-logo-escudo.png" alt="escudo do santos" style="margin-right: 25px;">
-                    <img src="ImagensLC/o-maior-brasileiro-do-mundo.png" alt="o maior brasileiro da terra">
-                </div>
-                <div class="div-language">
-                    <div class="box-language">
-                        <select onchange="slcIdioma()" id="idIdioma" class="select-language">
+    <div class="div-voltar" id="div_voltar"> <a href="../Home/home-pt.html"><i class="fas fa-angle-left"></i> <u>Voltar</u> </a> </div>
+    <div id="pag_login" class="container-login">
+        <div class="box-login">
+            <div class="div-img-login">
+                <img src="ImagensLC/santos-logo-escudo.png" alt="escudo do santos" style="margin-right: 25px;">
+                <img src="ImagensLC/o-maior-brasileiro-do-mundo.png" alt="o maior brasileiro da terra">
+            </div>
+            <div class="div-language">
+                <div class="box-language">
+                    <select onchange="slcIdioma()" id="idIdioma" class="select-language">
                         <option value="pt" >Português(BR)</option>
                         <option value="en">English</option>
                         <option value="es">Español</option>
                     </select>
-                    </div>
                 </div>
-                <div class="div-input-login">
-                    <form id="form_login" method="POST" onsubmit="return entrar()" class="box-input-login">
-                        <span>
+            </div>
+            <div class="div-input-login">
+                <form id="form_login" method="POST" onsubmit="return entrar()" class="box-input-login">
+                    <span>
                         Email <br>
                         <input type="email" placeholder="Digite seu email" name="email" id="id_email">
                     </span>
-                        <span>
+                    <span>
                         Senha <br>
                         <input type="password" placeholder="Digite sua senha" name="senha" id="id_senha">
                     </span>
-                        <div id="erro_login" class="esq-senha"></div>
-                        <div class="div-btn-entrar">
-                            <button id="btn_entrar" class="btn-entrar">Avançar</button>
-                        </div>
-                    </form>
-                </div>
+                    <div id="erro_login" class="esq-senha"></div>
+                    <div class="div-btn-entrar">
+                        <button id="btn_entrar" class="btn-entrar">Avançar</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <!-- ------------------------------------------------------------------------------------- -->
-        <div id="cadastro" class="container-cadastro">
-            <div class="sem-cadastro" id="sem_cadastro">
-                <div class="sem-cadastro-txt" style="display: block;">
-                    <h1>Junte-se ao Meu Santos!</h1> Aqui o torcedor está mais proximo do seu time! <br> Você tem acesso exclusivo a ofertas, sorteios e novidades! <br>
-                    <button onclick="mostrar_pt()">Registre-se</button>
-                </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------- -->
+    <div id="cadastro" class="container-cadastro">
+        <div class="sem-cadastro" id="sem_cadastro">
+            <div class="sem-cadastro-txt" style="display: block;">
+                <h1>Junte-se ao Meu Santos!</h1> Aqui o torcedor está mais proximo do seu time! <br> Você tem acesso exclusivo a ofertas, sorteios e novidades! <br>
+                <button onclick="mostrar_pt()">Registre-se</button>
             </div>
-            <div class="main-cadastro" id="main_cadastro" style="display: none;">
-                <div class="main-cadastro-box">
-                    <h1 id="cad_titulo">CRIAR UMA CONTA</h1>
-                    <form id="form_cadastro" method="POST" onsubmit="return cadastrar()" class="form-cadastro">
-                        <div class="div-inp">
-                            <span class="inp-left"><b id="cad_p_nome">Primeiro Nome</b><input class="inp-cadastro" type="text" name="primeiro_nome" autofocus="autofocus" ></span>
-                            <span class="inp-right"><b id="cad_s_nome">Ultimo Nome</b><input class="inp-cadastro" type="text" name="ultimo_nome"></span>
-                        </div>
-                        <div class="div-inp">
-                            <span class="inp-mid"><b id="cad_email">Email</b><input class="inp-cadastro" type="text" name="email_cad"></span>
-                        </div>
-                        <div class="div-inp">
-                            <span class="inp-left"><b id="cad_senha">Senha</b><input class="inp-cadastro" type="password" name="senha1"></span>
-                            <span class="inp-right"><b id="cad_jog">Jogador Favorito</b><select class="inp-cadastro" type="text" name="jogador">
+        </div>
+        <div class="main-cadastro" id="main_cadastro" style="display: none;">
+            <div class="main-cadastro-box">
+                <h1 id="cad_titulo">CRIAR UMA CONTA</h1>
+                <form id="form_cadastro" method="POST" onsubmit="return cadastrar()" class="form-cadastro">
+                    <div class="div-inp">
+                        <span class="inp-left"><b id="cad_p_nome">Primeiro Nome</b><input class="inp-cadastro" type="text" name="primeiro_nome" autofocus="autofocus" ></span>
+                        <span class="inp-right"><b id="cad_s_nome">Ultimo Nome</b><input class="inp-cadastro" type="text" name="ultimo_nome"></span>
+                    </div>
+                    <div class="div-inp">
+                        <span class="inp-mid"><b id="cad_email">Email</b><input class="inp-cadastro" type="text" name="email_cad"></span>
+                    </div>
+                    <div class="div-inp">
+                        <span class="inp-left"><b id="cad_senha">Senha</b><input class="inp-cadastro" type="password" name="senha1"></span>
+                        <span class="inp-right"><b id="cad_jog">Jogador Favorito</b><select class="inp-cadastro" type="text" name="jogador">
                                 <option disabled selected></option>
                                 <option style="color: black;" value="1">Alisson</option>
                                 <option style="color: black;" value="2">Angelo</option>
@@ -105,10 +106,10 @@
                                 <option style="color: black;" value="18">Sandry</option>
                                 <option style="color: black;" value="19">Kaio Jorge</option>
                             </select></span>
-                        </div>
-                        <div class="div-inp">
-                            <span class="inp-bot"><b id="cad_ani">Aniversário</b><input class="inp-cadastro" type="date" name="aniversario"></span>
-                            <span class="inp-bot"><b id="cad_pais">Pais</b><select class="inp-cadastro" type="text" name="pais">
+                    </div>
+                    <div class="div-inp">
+                        <span class="inp-bot"><b id="cad_ani">Aniversário</b><input class="inp-cadastro" type="date" name="aniversario"></span>
+                        <span class="inp-bot"><b id="cad_pais">Pais</b><select class="inp-cadastro" type="text" name="pais">
                                 <option style="color: black;" value="ALE">Alemanha</option>
                                 <option style="color: black;" value="ANG">Angola</option>
                                 <option style="color: black;" value="ARG">Argentina</option>
@@ -135,17 +136,17 @@
                                 <option style="color: black;" value="RUS">Rússia</option>
                                 <option style="color: black;" value="URU">Uruguai</option></select>
                             </span>
-                            <span class="inp-right"><b id="cad_idi">Idioma</b><select class="inp-cadastro" type="text" name="idioma"><option disabled selected></option><option style="color: black;" value="Portugues">Português</option><option style="color: black;" value="Espanhol">Espanhol</option><option style="color: black;" value="Ingles">Inglês</option></select></span>
-                        </div>
-                        <div id="div_erro" class="div-erro"></div>
-                        <div style="text-align: center;">
-                            <input value="registre-se" type="submit" id="btn_cad" class="btn-cadastro"></input>
-                        </div>
-                    </form>
+                        <span class="inp-right"><b id="cad_idi">Idioma</b><select class="inp-cadastro" type="text" name="idioma"><option disabled selected></option><option style="color: black;" value="Portugues">Português</option><option style="color: black;" value="Espanhol">Espanhol</option><option style="color: black;" value="Ingles">Inglês</option></select></span>
+                    </div>
+                    <div id="div_erro" class="div-erro"></div>
+                    <div style="text-align: center;">
+                        <input value="registre-se" type="submit" id="btn_cad" class="btn-cadastro"></input>
+                    </div>
+                </form>
 
-                </div>
             </div>
         </div>
+    </div>
 
 </body>
 
