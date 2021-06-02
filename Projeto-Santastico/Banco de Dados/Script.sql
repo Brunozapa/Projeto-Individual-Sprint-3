@@ -4,18 +4,11 @@ use meu_santos;
 create table jogador (
 idJogador int primary key auto_increment not null,
 nomeJogador varchar(40),
-posicao varchar(11),
-check (posicao = 'atacante' or posicao = 'meio' or posicao = 'defensor' or posicao = 'goleiro'),
+posicao varchar(20),
 idade int,
 camisa int,
 nacionalidade varchar(15)
 ) auto_increment = 1;
-
-create table socio (
-idSocio int primary key not null,
-plano varchar (5),
-check (plano = 'silver' or plano = 'gold' or plano = 'black')
-);
 
 create table usuario (
 idUsuario int primary key auto_increment not null,
@@ -29,10 +22,8 @@ cidade varchar(40),
 idioma varchar(10),
 check (idioma = 'ingles' or idioma = 'portugues' or idioma = 'espanhol'),
 fkJogador int,
-foreign key (fkJogador) references jogador(idJogador),
-fkSocio int,
-foreign key (fkSocio) references socio(idSocio)
-) auto_increment = 100;
+foreign key (fkJogador) references jogador(idJogador)
+) auto_increment = 1;
 
 insert into jogador values 
 (null, 'Alisson', 'meio-campista', 28,5,'Brasil'),
@@ -57,10 +48,10 @@ insert into jogador values
 
 
 select * from usuario;
-
+select * from jogador;
 select fkJogador as jogFav ,count(*) as cont from usuario group by fkJogador order by cont desc limit 1;
 
-select * from jogador;
+
 
 insert into usuario (fkJogador) values 
-(2),(2),(2),(3),(4),(4),(12),(12),(15),(15),(15),(15),(15),(15),(15),(15);
+(16),(16),(16),(16),(16),(16),(16),(16),(15),(15),(15),(15),(15),(15),(15),(15);
