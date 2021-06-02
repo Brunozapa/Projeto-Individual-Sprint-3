@@ -57,3 +57,10 @@ insert into jogador values
 
 
 select * from usuario;
+
+select fkJogador as jogFav ,count(*) as cont from usuario group by fkJogador order by cont desc limit 1;
+
+select * from jogador;
+
+insert into usuario (fkJogador) values 
+(2),(2),(2),(3),(4),(4),(12),(12),(15),(15),(15),(15),(15),(15),(15),(15);
