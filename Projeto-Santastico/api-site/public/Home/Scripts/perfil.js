@@ -100,7 +100,7 @@ var vetor_posicao_en = ['Midfielder', 'Striker', 'Midfielder', 'Striker', 'Full-
     'Midfielder', 'Striker', 'Full-back', 'Striker', 'Full-back', 'Midfielder', 'Midfielder', 'Midfielder', 'Striker'
 ];
 /* paises */
-var vetor_nacionalidade = ['Brasil', 'Brasil', 'Brasil ', 'Colombia', 'Brasil', 'Brasil', 'Brasil', 'Brasil', 'Brasil',
+var vetor_nacionalidade = ['Brasil', 'Brasil', 'Brasil', 'Colombia', 'Brasil', 'Brasil', 'Brasil', 'Brasil', 'Brasil',
     'Brasil', 'Brasil', 'Brasil', 'Brasil', 'Brasil', 'Brasil', 'Brasil', 'Uruguai', 'Brasil', 'Brasil'
 ];
 var vetor_nacionalidade_es = ['Brasil', 'Brasil', 'Brasil ', 'Colombia', 'Brasil', 'Brasil', 'Brasil', 'Brasil', 'Brasil',
